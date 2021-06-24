@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route, Switch } from 'react-router-dom';
 import './App.css';
+import Auth from './components/Main/Authentefication/Auth/Auth';
+import Profile from './components/Main/Profile/Profile';
+import {Packs} from './components/Main/Packs/Packs';
+import {Cards} from './components/Main/1_Cards/Cards';
+import {PageNotFounded} from './components/Main/PageNotFounded/PageNotFounded';
 
 const App = () => {
+
+    const PATH = {
+        AUTH: '/auth',
+        LOGIN: 'auth/login',
+        PROFILE: '/profile',
+        PACKS: '/packs',
+        CARDS: '/cards/:id/:name',
+    }
+
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            {/*<Header/>*/}
+            <Switch>
+                <Route path={PATH.AUTH} render={() => <Auth/>}/>
+                <Route path={PATH.PROFILE} render={() => <Profile/>}/>
+                <Route path={PATH.PACKS} render={() => <Packs/>}/>
+                <Route path={PATH.CARDS} render={() => <Cards/>}/>
+                <Route render={() => <PageNotFounded/>}/>
+
+            </Switch>
+
         </div>
     );
 }
