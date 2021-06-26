@@ -11,7 +11,7 @@ const App = () => {
     const PATH = {
         AUTH: '/auth',
         LOGIN: 'auth/login',
-        PROFILE: '/profile',
+        PROFILE: '/profile'
 
     }
 
