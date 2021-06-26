@@ -3,9 +3,8 @@ import {Route, Switch } from 'react-router-dom';
 import './App.css';
 import Auth from './components/Main/Authentefication/Auth/Auth';
 import Profile from './components/Main/Profile/Profile';
-import {Packs} from './components/Main/Packs/Packs';
-import {Cards} from './components/Main/Cards/Cards';
 import {PageNotFounded} from './components/Main/PageNotFounded/PageNotFounded';
+import Login from './components/Main/Authentefication/Login/Login';
 
 const App = () => {
 
@@ -13,8 +12,7 @@ const App = () => {
         AUTH: '/auth',
         LOGIN: 'auth/login',
         PROFILE: '/profile',
-        PACKS: '/packs',
-        CARDS: '/cards/',
+
     }
 
     return (
@@ -23,8 +21,7 @@ const App = () => {
             <Switch>
                 <Route path={PATH.AUTH} render={() => <Auth/>}/>
                 <Route path={PATH.PROFILE} render={() => <Profile/>}/>
-                <Route path={PATH.PACKS} render={() => <Packs/>}/>
-                <Route path={PATH.CARDS} render={() => <Cards/>}/>
+                <Route path={PATH.LOGIN} render={() => <Login/>}/>
                 <Route render={() => <PageNotFounded/>}/>
 
             </Switch>
