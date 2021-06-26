@@ -4,7 +4,7 @@ import './App.css';
 import Auth from './components/Main/Authentefication/Auth/Auth';
 import Profile from './components/Main/Profile/Profile';
 import {Packs} from './components/Main/Packs/Packs';
-import {Cards} from './components/Main/1_Cards/Cards';
+import {Cards} from './components/Main/Cards/Cards';
 import {PageNotFounded} from './components/Main/PageNotFounded/PageNotFounded';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
         LOGIN: 'auth/login',
         PROFILE: '/profile',
         PACKS: '/packs',
-        CARDS: '/cards/:id/:name',
+        CARDS: '/cards/',
     }
 
     return (

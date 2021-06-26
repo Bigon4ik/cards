@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const baseURL = 'http://localhost:7542/2.0'
+export const baseURL = ''
 const cardsRequest = axios.create({
     baseURL,
     withCredentials: true
